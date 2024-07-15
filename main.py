@@ -6,7 +6,7 @@ gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
 print(image.shape)
 # prak_2_img = image[0: 80, 117: 207, :]
 
-faces = faceCascade.detectMultiScale(gray, scaleFactor=1.11, minNeighbors=5, minSize=(40, 40))
+faces = faceCascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(40, 40))
 print("Found {0} faces!".format(len(faces)))
 kor = []
 for (x, y, w, h) in faces:
