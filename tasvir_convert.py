@@ -11,13 +11,12 @@ def read_image(filname):
 image, gray = read_image('images/image1.jpg')
 image2, gray2 = read_image('images/image2.jpg')
 tasvir1 = gray[251: 251+250, 79: 79+250]
-tasvir2 = gray2[321: 321+110, 1000: 1000+110]
+tasvir2 = gray2[337: 337+77, 308: 308+77]
 # tasvir2 = gray2[357: 357+110, 717: 717+110]
 x, y = tasvir1.shape
 tasvir2 = cv.resize(tasvir2, (x, y))
 # border qo'shish
 # tasvir2 = cv.copyMakeBorder(tasvir2, 70, 70, 70, 70, cv.BORDER_CONSTANT)
-[717, 357, 110, 110]
 print(tasvir1.shape)
 print(tasvir2.shape)
 mudir = [ 79, 297,  80,  80]

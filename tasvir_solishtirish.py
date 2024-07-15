@@ -47,11 +47,13 @@ image2, gray2 = read_image('images/image2.jpg')
 
 # Tasvirlarni bir xil o'lchamga keltirish
 resize_dim = (gray1.shape)
-gray1_resized = cv.resize(gray1, resize_dim)
-gray2_resized = cv.resize(gray2, resize_dim)
 
 tasvir1 = gray1[251: 251+250, 79: 79+250]
-tasvir2 = gray2[357: 357+110, 717: 717+110]
+tasvir2 = gray2[297: 297+80, 79: 79+80]
+# tasvir2 = cv.copyMakeBorder(tasvir2, 85, 85, 85, 85, cv.BORDER_CONSTANT)
+print(tasvir2.shape)
+gray1_resized = cv.resize(tasvir1, resize_dim)
+gray2_resized = cv.resize(tasvir2, resize_dim)
 # HOG descriptorlarini chiqarish
 hog = cv.HOGDescriptor()
 
