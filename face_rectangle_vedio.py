@@ -1,4 +1,5 @@
 import cv2 as cv
+import time
 harcascade = "C:/Users/Xakimov Allamurod/Documents/Computer vision/computer-vision-1m/model/haarcascade_frontalface_default.xml"
 faceCascade = cv.CascadeClassifier(harcascade)
 video_capture = cv.VideoCapture(0)

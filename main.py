@@ -1,6 +1,8 @@
 import cv2 as cv
 harcascade = "model/haarcascade_frontalface_default.xml"
 faceCascade = cv.CascadeClassifier(harcascade)
+eyesCascade = cv.CascadeClassifier('model/haarcascade_eye.xml')
+
 image = cv.imread('images/image2.jpg')
 gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
 print(image.shape)
