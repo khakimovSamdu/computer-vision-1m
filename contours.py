@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture('C:/Users/Xakimov Allamurod/OneDrive/Documents/githup/computer-vision-1m/images/futbal.mp4')  # Fayl nomini to'g'irlang
+cap = cv2.VideoCapture('C:/Users/Xakimov Allamurod/Documents/Computer vision/computer-vision-1m/images/vedio_new.mp4')  # Fayl nomini to'g'irlang
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 

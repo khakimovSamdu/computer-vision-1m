@@ -147,23 +147,59 @@
 # print(str(df).count('1'))
 
 
-def convert_to_base(n, k):
-    digits = []
-    while n > 0:
-        digits.append(n % k)
-        n //= k
-    digits.reverse()  
-    return digits
-def product_of_digits(digits):
-    product = 1
-    for digit in digits:
-        product *= digit
-    return product
-def sum_of_digits(digits):
-    return sum(digits)
-n, k = map(int, input().strip().split())
-digits = convert_to_base(n, k)
-product = product_of_digits(digits)
-summation = sum_of_digits(digits)
-difference = product - summation
-print(difference)
+# def convert_to_base(n, k):
+#     digits = []
+#     while n > 0:
+#         digits.append(n % k)
+#         n //= k
+#     digits.reverse()  
+#     return digits
+# def product_of_digits(digits):
+#     product = 1
+#     for digit in digits:
+#         product *= digit
+#     return product
+# def sum_of_digits(digits):
+#     return sum(digits)
+# n, k = map(int, input().strip().split())
+# digits = convert_to_base(n, k)
+# product = product_of_digits(digits)
+# summation = sum_of_digits(digits)
+# difference = product - summation
+# print(difference)
+
+# def reverse_binary(m):
+#     bin_m = bin(m)[2:]
+#     rev_m = bin_m[::-1]
+#     n = int(rev_m, 2)
+#     return n
+# n = int(input())
+# print(reverse_binary(n))
+
+# def calculate_phone_bill(A, B, C, T):
+#     if T <= A:
+#         return T * B
+#     else:
+#         return A * B + (T - A) * C
+# a, b, c, t = map(int, input().split())
+# print(calculate_phone_bill(a, b, c, t))
+
+# def is_uchburchak(a, b, c):
+#     if a+b>c and b+c>a and a+c>b:
+#         return True
+#     else:
+#         return False
+# a, b, c = map(int, input().split())
+# data = is_uchburchak(a, b, c)
+# if data:
+#     print("YES")
+# else:
+#     print("NO")
+
+def find_page_and_line(K, N):
+    df = (N - 1) // K + 1
+    fh = (N - 1) % K + 1
+    return df, fh
+k, n = map(int, input().split())
+k1, n1 = find_page_and_line(k, n)
+print(k1, n1)

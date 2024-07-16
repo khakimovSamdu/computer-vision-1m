@@ -22,7 +22,7 @@ def detect(img, faceCascade, eyesCascade):
 faceCascade = cv.CascadeClassifier("model/haarcascade_frontalface_default.xml")
 eyesCascade = cv.CascadeClassifier('model/haarcascade_eye.xml')
 
-img = cv.imread('images/image2.jpg')
+img = cv.imread('images/image5.jpg')
 img = detect(img, faceCascade, eyesCascade)
 cv.imshow('Face detection', img)
 cv.waitKey(0)
