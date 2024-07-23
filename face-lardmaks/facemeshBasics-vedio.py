@@ -32,7 +32,10 @@ while True:
             for id, lm in enumerate(faceLms.landmark):
                 ih, iw, _ = img.shape
                 x, y = int(lm.x * iw), int(lm.y * ih)
+                print(lm)
                 print(id, x, y)
+            
+    
 
     cTime = time.time()
     fps = 1 / (cTime - pTime)
